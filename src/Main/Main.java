@@ -9,7 +9,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		// Load from 'FCL' file
-        String fileName = "fcl/fcl.fcl";
+        String fileName = "fcl/JWGZfcl.fcl";
         FIS fis = FIS.load(fileName,true);
 
         // Error while loading?
@@ -25,15 +25,16 @@ public class Main {
         
         
         // Set inputs
-        fis.setVariable("service", 3);
-        fis.setVariable("food", 7);
+        fis.setVariable("skill", 2);
+        fis.setVariable("expirience", 7);
+        fis.setVariable("softSkills", 7);
 
         // Evaluate
         fis.evaluate();
 
         // Show output variable's chart
-        Variable tip = functionBlock.getVariable("tip");
-        JFuzzyChart.get().chart(tip, tip.getDefuzzifier(), true);
+        Variable salary = functionBlock.getVariable("salary");
+        JFuzzyChart.get().chart(salary, salary.getDefuzzifier(), true);
 
         // Print ruleSet
         System.out.println(fis);
