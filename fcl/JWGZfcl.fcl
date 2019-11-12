@@ -13,7 +13,7 @@ VAR_OUTPUT
     salary : REAL;
 END_VAR
 
-// Fuzzify input variable 'service'
+// Fuzzify input variable 'skill'
 FUZZIFY skill
     TERM junior := (0, 1) (3, 0) ; 
     TERM mid := (1, 0) (5,1) (7,0);
@@ -22,14 +22,14 @@ FUZZIFY skill
     TERM ninja := (7, 0) (10, 1);*/
 END_FUZZIFY
 
-// Fuzzify input variable 'food'
+// Fuzzify input variable 'exp'
 FUZZIFY experience
     TERM juniorExp := (0, 1) (2,0) ;
     TERM midExp := (1,0) (3,1) (4,0) ;
     TERM seniorExp := (3, 0) (20, 1) ;
 END_FUZZIFY
 
-// Fuzzify input variable 'food'
+// Fuzzify input variable 'soft skill'
 FUZZIFY softSkills
     TERM low := (0, 1) (4,0) ;
     TERM average := (2,0) (5,1) (7,0);
