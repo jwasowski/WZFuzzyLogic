@@ -8,7 +8,7 @@ import net.sourceforge.jFuzzyLogic.rule.Variable;
 public class Main {
 
 	public static void main(String[] args) {
-		// Load from 'FCL' file
+		// FCL file path
 		String fileName = "fcl/JWGZfcl.fcl";
 		// Number of arguments checker
 		if (args.length < 3 || args.length > 3) {
@@ -18,6 +18,7 @@ public class Main {
 			System.exit(0);
 		}
 		String[] params = args;
+		// Load from 'FCL' file
 		FIS fis = FIS.load(fileName, true);
 
 		// Error while loading?
@@ -35,22 +36,23 @@ public class Main {
 		fis.setVariable("skill", Float.parseFloat(params[0]));
 		// Years of Experience
 		fis.setVariable("experience", Float.parseFloat(params[1]));
-		// How good communicator he is?
+		// How good communicator she/he is?
 		fis.setVariable("softSkills", Float.parseFloat(params[2]));
 
 		// Evaluate
 		fis.evaluate();
 
 		// Show output variable's chart
-		// Salary value should be multiplied by 1k
 		Variable salary = functionBlock.getVariable("salary");
 		JFuzzyChart.get().chart(salary, salary.getDefuzzifier(), true);
 
 		// Print ruleSet
 		System.out.println(fis);
+		// Print arguments
 		System.out.println("Skill value: " + params[0]);
 		System.out.println("Experience value: " + params[1]);
 		System.out.println("Soft Skills value: " + params[2]);
+		// Print Salary value
 		System.out.println("Estimated salary: " + Math.floor(salary.getValue() * 1000));
 
 	}

@@ -2,17 +2,9 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>WZFuzzyLogic</groupId>
   <artifactId>WZFuzzyLogic</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1.0.0</version>
   <name>WZFuzzyLogic-project</name>
-  <dependencies>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.12</version>
-		</dependency>
-
-
-
+  <dependencies>		
 	</dependencies>
   <build>
     <sourceDirectory>src</sourceDirectory>
